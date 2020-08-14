@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fetch API</title>
+	</head>
+	<body>
+		<h1>Fetch API</h1>
+		<div class="dataUI"></div>
+		<script>
+			/* Fetch API */
+			const dataUI = document.querySelector(".dataUI");
+
+			apiCall1("http://www.boredapi.com/api/activity/");
+			apiCall2("https://jsonplaceholder.typicode.com/users/1");
+
+			const KEY = "a5cc697abb775d28d9656168d8765d49";
+			const cors = "https://cors-anywhere.herokuapp.com/";
+			const city = "London";
+			apiCall3(
+				`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${KEY}`
+			);
+
+			function apiCall1(api) {
+				fetch(api)
+					.then((res) => res.json())
+					.then((data) => {
+						dataUI.innerHTML += `
+						<h4>
+							Data Loaded from <em>"${api}"</em>
+						</h4>
+						Activity: ${data.activity}, <br>
+						Type: ${data.type}, <br> 
+						Link: ${data.link}, <br> 
+						Price : ${data.price}
+					`;
+					});
+			}
+
+			function apiCall2(api) {
+				fetch(api)
+					.then((res) => res.json())
+					.then((data) => {
+						dataUI.innerHTML += `
+						<h4>
+							Data Loaded from <em>"${api}"</em>
+						</h4>
+						Name: ${data.name} <br>
+						User: ${data.username} <br>
+						Email: ${data.email}
+					`;
+					});
+			}
+
+			function apiCall3(api) {
+				fetch(api)
+					.then((res) => res.json())
+					.then((data) => {
+						console.log(data);
+						dataUI.innerHTML += `
+						<h4>
+							Data Loaded from <em>"${api}"</em>
+						</h4>
+						${data.name}, ${data.sys.country} <br>
+						Temperature: ${Math.floor(data.main.temp - 273)}° C <br>
+						Weather: ${data.weather[0].main}, ${data.weather[0].description}
+					`;
+					});
+			}
+		</script>
+	</body>
+</html>

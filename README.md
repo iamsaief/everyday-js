@@ -123,13 +123,12 @@ To become a web developer or frontend developer we must be comfortable with Fund
 
 ### Array, Index, IndexOf, push, pop, length
 
-```javascript
-/**
  * Array index count from 0
- * Array.push() adds an element at the end
- * Array.pop() removes an element from the end
- */
+ * `Array.push()` adds an element at the end
+ * `Array.pop()` removes an element from the end
 
+```javascript
+/* Array.push() */
 var friendsAge = [18, 20, 19, 21, 17];
 console.log(friendsAge[2]);
 // Output: 19
@@ -140,6 +139,7 @@ console.log(friendsAge);
 console.log(friendsAge.length);
 // Output: 6
 
+/* Array.pop() */
 friendsAge.pop();
 console.log(friendsAge);
 // Output : [18, 20, 19, 21, 17]
@@ -404,7 +404,8 @@ console.log(min, max);
 -   ### Default parameter, template string, backtick - ` `` `
 
 In some cases, we need predefined values to work with. Here comes, in function, we can set some default values `num=10` to a parameter. If that parameter isn't passed then it'll take the default one, otherwise overwrite it.
-Backtick comes handy when string formatting is done, we can use variables inside and don't worry to concatenate string, like `Hello! ${name}`
+
+Backtick comes handy when string formatting is done, we can use variables inside and don't worry to concatenate string, like  ``` `Hello! ${name}` ```
 
 ```javascript
 /* Default Parameter */
@@ -519,7 +520,7 @@ console.log(kid1.getFamily()); // Output: Name: Flora Nolan, Father: Christopher
 
 ## 🤖 Intermediate JS
 
-JavaScript can be tricky in some cases. Let find out some of them we have to encounter every day.
+JavaScript can be tricky in some cases. Let's find out some of them we have to encounter every day.
 
 -   ### Truthy/Falsy value
 
@@ -654,9 +655,9 @@ if (first == second) {
 
     One of the reasons why `ES6` is so useful, it makes your life a lot easy. Let's write a modern `for` loop.
 
-    -   `map` - runs through all the elements, returns a new array
-    -   `filter` - runs through all the elements, returns only those who fulfill the condition to a new array.
-    -   `find` - runs through all the elements, returns only the element who fulfills the condition.
+    -   `map()` - runs through all the elements, returns a new array
+    -   `filter()` - runs through all the elements, returns only those who fulfill the condition to a new array.
+    -   `find()` - runs through all the elements, returns only the element who fulfills the condition.
 
 ```javascript
 /* Map */
@@ -710,9 +711,9 @@ console.log(result); // 10
 ```
 
 -   ### slice(), splice(), join()
-    -   slice() - takes starting index and before-end index, returns new array
-    -   splice() - takes starting index, item number (how many to remove), item number (how many to add, optional),, mutates original array.
-    -   join() - It takes an array and join the item to a string
+    -   `slice()` - takes starting index and before-end index, returns new array
+    -   `splice()` - takes starting index, item number (how many to remove), item number (how many to add, optional),, mutates original array.
+    -   `join()` - It takes an array and join the item to a string
 
 ```javascript
 /* slice(), splice(), join() */

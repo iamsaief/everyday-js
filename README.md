@@ -1,6 +1,13 @@
-# 🚀 Everyday JavaScript
+# 🚀 Everyday JavaScript 
 
-This is a self documentation/learning secquence I followed. It works as javascript reference we use on daily basis. If you are interested check it out, correct me if I am wrong.
+This is a self-documentation/learning sequence I followed. It works as a javascript reference we use daily. If you are interested check it out, correct me if I am wrong.
+
+## Table of content
+1. [ 🌱  Getting startded with basic JS](#-getting-startded-with-basic-js)
+2. [👩‍💻  Fundamental JS Concepts](#-fundamental-js-concepts)
+3. [👨‍🚀 Modern JS, ES6](#-modern-js-es6)
+4. [🤖 Intermediate JS](#-intermediate-js)
+5. [📡 API, JSON, Data Load, GET/POST](#-api-json-data-load-getpost)
 
 ## 🌱 Getting startded with basic JS
 
@@ -112,7 +119,7 @@ console.log(isAdult);
 
 ## 👩‍💻 Fundamental JS Concepts
 
-To become a web developer or frontend develper we must be comfortable with _Fundamental JS Concepts_. Lets explore in brief.
+To become a web developer or frontend developer we must be comfortable with Fundamental JS Concepts. Let's explore in brief.
 
 ### Array, Index, IndexOf, push, pop, length
 
@@ -143,21 +150,23 @@ console.log(friendsAge.length);
 
 ### Add/Remove element from the beginning and slice
 
+ * `Array.shift()` removes an element from the beginning
+ * `Array.unshift()` adds an element to the beginning
+ * `Array.slice(start, endbefore)`, returns new array
+
 ```javascript
-/**
- * Array.shift() removes an element from the beginning
- * Array.unshift() adds an element to the beginning
- * Array.slice(start, endbefore), returns new array
- */
+/* Array.shift() */
 var animals = ["🦄", "🦓", "🐵", "🐶"];
 animals.shift();
 console.log(animals);
 // Output: ["🦓","🐵","🐶"];
 
+/* Array.unshift() */
 animals.unshift("🦒");
 console.log(animals);
 // Output: ["🦒","🦓","🐵","🐶"];
 
+/* Array.slice() */
 var slicedAnimals = animals.slice(0, 3);
 console.log(slicedAnimals);
 // Output: ["🦒", "🦓", "🐵"];
@@ -242,7 +251,10 @@ switch (i) {
 
 ### Function, Parameter, Return
 
-There is a saying, Don't Repeat Yourself aka DRY in programming, whenever the repetation comes there we `function` to make life easier.
+There is a saying, 
+> Don't Repeat Yourself aka the DRY principle.
+
+in programming, whenever the repetation comes there we `function` to make life easier.
 
 -   Function and Function call
 
@@ -304,7 +316,7 @@ Output :
 
 ## 👨‍🚀 Modern JS, ES6
 
-ES6 refers to version 6 of the ECMA Script programming language. ECMA Script is the standardized name for JavaScript, and version 6 is the next version after version 5, which was released in 2011. It is a major enhancement to the JavaScript language, and adds many more features intended to make large-scale software development easier.
+ES6 refers to version 6 of the ECMA Script programming language. ECMA Script is the standardized name for JavaScript, and version 6 is the next version after version 5, which was released in 2011. It is a major enhancement to the JavaScript language and adds many more features intended to make large-scale software development easier.
 
 ECMAScript, or ES6, was published in June 2015.
 
@@ -352,7 +364,7 @@ console.log(i);
 
 -   ### array/object destructuring, spread operator
 
-Magial the 3 dots (`...`) will spread out what value you want. 😉
+Magical the 3 dots (`...`) will spread out what value you want. 😉
 
 ```javascript
 /* 3 dots: spread */
@@ -391,6 +403,9 @@ console.log(min, max);
 
 -   ### Default parameter, template string, backtick - ` `` `
 
+In some cases, we need predefined values to work with. Here comes, in function, we can set some default values `num=10` to a parameter. If that parameter isn't passed then it'll take the default one, otherwise overwrite it.
+Backtick comes handy when string formatting is done, we can use variables inside and don't worry to concatenate string, like `Hello! ${name}`
+
 ```javascript
 /* Default Parameter */
 function addFifty(num1, num2 = 50) {
@@ -412,7 +427,7 @@ greetings("Jenny");
 
 -   ### Mighty arrow function `()=>{}`
 
-Functions are everywhere in js, and to name them is really hard. But now in `es6` we can create annonymus function like this `()=>{}`. We dont have to use the `return` statement when there is only one statement in the function's body, this is known as `implicit return`.
+Functions are everywhere in js, and to name them is hard. But now in `ES6`, we can create an anonymous function like this `()=>{}`. We won't have to use the `return` statement when there is only one statement in the function's body, this is known as `implicit return`.
 
 ```javascript
 /* Arrow functions - implicit rerurn*/
@@ -440,7 +455,7 @@ Classes are a template for creating objects. They encapsulate data with code to 
 
 Use the keyword `class` to create a class, and always add the `constructor()` method. The constructor method is called each time the class object is initialized.
 
-NB: Variables in class is called `property` and funcions are called `method`
+NB: Variables in class is called `property` and functions are called `method`
 
 [Click here, for more](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 
@@ -504,11 +519,11 @@ console.log(kid1.getFamily()); // Output: Name: Flora Nolan, Father: Christopher
 
 ## 🤖 Intermediate JS
 
-JavaScript can be tricky in some cases. Let find out some them we have to encounter everyday.
+JavaScript can be tricky in some cases. Let find out some of them we have to encounter every day.
 
 -   ### Truthy/Falsy value
 
-Any number except 0 is true. If the value of any variable is 0 will return false. Simillary, we get falsy result when `undefined`, `null`, `NaN`, `false` is the return value.
+Any number except 0 is true. If the value of any variable is 0 will return false. Similarly, we get a falsy result when `undefined`, `null`, `NaN`, `false` is the return value.
 
 | truthy            | falsy     |
 | ----------------- | --------- |
@@ -598,7 +613,7 @@ console.log(userData.address);
 
 -   ### == vs ===, implicit conversion
 
-    Both represent logical eqality but here is the mighty difference-
+    Both represent logical equality but here is the mighty difference-
 
     -   == checks values only, it tries to compare by implicit type conversion
     -   === checks both values and types
@@ -637,11 +652,11 @@ if (first == second) {
 
 -   ### map(), filter(), find()
 
-    One of the reasons why `ES6` is so usefull, it makes your life a lot easy. Lets write modern `for` loop.
+    One of the reasons why `ES6` is so useful, it makes your life a lot easy. Let's write a modern `for` loop.
 
-    -   `map` - runs through all the elements, returns new array
-    -   `filter` - runs through all the elements, returns only those who fullfill the condition to a new array.
-    -   `find` - runs through all the elements, returns only the element who fullfills the condition.
+    -   `map` - runs through all the elements, returns a new array
+    -   `filter` - runs through all the elements, returns only those who fulfill the condition to a new array.
+    -   `find` - runs through all the elements, returns only the element who fulfills the condition.
 
 ```javascript
 /* Map */
@@ -669,7 +684,7 @@ console.log(greenH);
 -   ### global/block scope, accessing outer scope variables, hoisting
 
     -   `let`, `const` doest go outside block/function scope, but
-    -   varibales with `var` gets hoisted, means that it takes the declaration outside of the scope, thus it can be accessed from outer scope.
+    -   variables with `var` get hoisted, means that it takes the declaration outside of the scope, thus it can be accessed from the outer scope.
 
 ```javascript
 /* global/block scope */
@@ -725,7 +740,7 @@ console.log(together);
 
 ## 📡 API, JSON, Data Load, GET/POST
 
-To take your development skills further lets paly with `data` from server or any 3rd party `API`. Earlier we had to use complex `XMLHttpRequest API`, now modern `Fetch API` does the same and its easier to understand.
+To take your development skills further lets paly with `data` from a server or any 3rd party `API`. Earlier we had to use complex `XMLHttpRequest API`, now modern `Fetch API` does the same, and its easier to understand.
 
 [for more, click here](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 

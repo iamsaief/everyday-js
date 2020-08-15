@@ -14,7 +14,7 @@ This is a self-documentation/learning sequence I followed. It works as a javascr
 
 Who likes spending time on a static site? nobody, right? So to give life to a website we use JavaScripts. But to dive deep here are few things we must know.
 
-## Variables :
+### Variables
 
 To store different values `var` keyword is used. for example,
 

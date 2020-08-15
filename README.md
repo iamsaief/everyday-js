@@ -1,10 +1,11 @@
-# 🚀 Everyday JavaScript 
+# 🚀 Everyday JavaScript
 
 This is a self-documentation/learning sequence I followed. It works as a javascript reference we use daily. If you are interested check it out, correct me if I am wrong.
 
 ## Table of content
-1. [ 🌱  Getting startded with basic JS](#-getting-startded-with-basic-js)
-2. [👩‍💻  Fundamental JS Concepts](#-fundamental-js-concepts)
+
+1. [ 🌱 Getting startded with basic JS](#-getting-startded-with-basic-js)
+2. [👩‍💻 Fundamental JS Concepts](#-fundamental-js-concepts)
 3. [👨‍🚀 Modern JS, ES6](#-modern-js-es6)
 4. [🤖 Intermediate JS](#-intermediate-js)
 5. [📡 API, JSON, Data Load, GET/POST](#-api-json-data-load-getpost)
@@ -123,9 +124,9 @@ To become a web developer or frontend developer we must be comfortable with Fund
 
 ### Array, Index, IndexOf, push, pop, length
 
- * Array index count from 0
- * `Array.push()` adds an element at the end
- * `Array.pop()` removes an element from the end
+-   Array index count from 0
+-   `Array.push()` adds an element at the end
+-   `Array.pop()` removes an element from the end
 
 ```javascript
 /* Array.push() */
@@ -150,9 +151,9 @@ console.log(friendsAge.length);
 
 ### Add/Remove element from the beginning and slice
 
- * `Array.shift()` removes an element from the beginning
- * `Array.unshift()` adds an element to the beginning
- * `Array.slice(start, endbefore)`, returns new array
+-   `Array.shift()` removes an element from the beginning
+-   `Array.unshift()` adds an element to the beginning
+-   `Array.slice(start, endbefore)`, returns new array
 
 ```javascript
 /* Array.shift() */
@@ -251,10 +252,11 @@ switch (i) {
 
 ### Function, Parameter, Return
 
-There is a saying, 
+There is a saying,
+
 > Don't Repeat Yourself aka the DRY principle.
 
-in programming, whenever the repetation comes there we `function` to make life easier.
+in programming, whenever the repetation comes there we add `function`'s to make our life easier. 😉
 
 -   Function and Function call
 
@@ -318,7 +320,7 @@ Output :
 
 ES6 refers to version 6 of the ECMA Script programming language. ECMA Script is the standardized name for JavaScript, and version 6 is the next version after version 5, which was released in 2011. It is a major enhancement to the JavaScript language and adds many more features intended to make large-scale software development easier.
 
-ECMAScript, or ES6, was published in June 2015.
+`ECMAScript6`, or `ES6`, was published in June 2015.
 
 -   ### _let, const_, _scope_
 
@@ -405,7 +407,7 @@ console.log(min, max);
 
 In some cases, we need predefined values to work with. Here comes, in function, we can set some default values `num=10` to a parameter. If that parameter isn't passed then it'll take the default one, otherwise overwrite it.
 
-Backtick comes handy when string formatting is done, we can use variables inside and don't worry to concatenate string, like  ``` `Hello! ${name}` ```
+Backtick comes handy when string formatting is done, we can use variables inside and don't worry to concatenate string, like `` `Hello! ${name}` ``
 
 ```javascript
 /* Default Parameter */
@@ -684,7 +686,7 @@ console.log(greenH);
 
 -   ### global/block scope, accessing outer scope variables, hoisting
 
-    -   `let`, `const` doest go outside block/function scope, but
+    -   `let`, `const` doesn't go outside block/function scope, but
     -   variables with `var` get hoisted, means that it takes the declaration outside of the scope, thus it can be accessed from the outer scope.
 
 ```javascript
@@ -745,6 +747,8 @@ To take your development skills further lets paly with `data` from a server or a
 
 [for more, click here](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
+### Fetch API, Data Load, GET/POST
+
 ```html
 <h1>Fetch API</h1>
 <div class="dataUI"></div>
@@ -769,4 +773,86 @@ To take your development skills further lets paly with `data` from a server or a
 			});
 	}
 </script>
+```
+
+### JSON
+
+JavaScript Object Notation (`JSON`) is a standard text-based format for representing structured data based on JavaScript object syntax. You can include the same basic data types inside JSON as you can in a standard JavaScript object — strings, numbers, arrays, booleans, and other object literals. This allows you to construct a data hierarchy.
+
+It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on a web page, or vice versa).
+
+JSON exists as a string. It needs to be converted to a native JavaScript object when you want to access the data.
+
+```javascript
+/* Data as JSON */
+const data = `
+{
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+  }
+`;
+```
+
+JavaScript provides a global `JSON object` that has methods available for converting between the two.
+
+-   `JSON.parse()`: Accepts a JSON `string` as a parameter, and returns the corresponding JavaScript `object`.
+-   `JSON.stringify()`: It does the opposite.
+
+```javascript
+/* JSON to Object*/
+const obj = JSON.parse(data);
+const json = JSON.stringify(obj);
+
+console.log(obj);
+
+/* Output:
+{
+  id: 1,
+  name: 'Leanne Graham',
+  username: 'Bret',
+  email: 'Sincere@april.biz',
+  address: {
+    street: 'Kulas Light',
+    suite: 'Apt. 556',
+    city: 'Gwenborough',
+    zipcode: '92998-3874',
+    geo: {
+      lat: '-37.3159',
+      lng: '81.1496'
+    }
+  },
+  phone: '1-770-736-8031 x56442',
+  website: 'hildegard.org',
+  company: {
+    name: 'Romaguera-Crona',
+    catchPhrase: 'Multi-layered client-server neural-net',
+    bs: 'harness real-time e-markets'
+  }
+}
+*/
+
+console.log(json);
+
+/* Output:
+{"id":1,"name":"Leanne Graham","username":"Bret","email":"Sincere@april.biz","address":{"street":"Kulas Light","suite":"Apt. 556","city":"Gwenborough","zipcode":"92998-3874","geo":{"lat":"-37.3159","lng":"81.1496"}},"phone":"1-770-736-8031 x56442","website":"hildegard.org","company":{"name":"Romaguera-Crona","catchPhrase":"Multi-layered client-server neural-net","bs":"harness real-time e-markets"}}
+*/
 ```

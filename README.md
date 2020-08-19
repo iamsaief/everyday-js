@@ -4,13 +4,13 @@ This is a self-documentation/learning sequence I followed. It works as a javascr
 
 ## Table of content
 
-1. [ 🌱 Getting startded with basic JS](#-getting-startded-with-basic-js)
+1. [ 🌱 Getting started with basic JS](#-getting-started-with-basic-js)
 2. [👩‍💻 Fundamental JS Concepts](#-fundamental-js-concepts)
 3. [👨‍🚀 Modern JS, ES6](#-modern-js-es6)
 4. [🤖 Intermediate JS](#-intermediate-js)
 5. [📡 API, JSON, Data Load, GET/POST](#-api-json-data-load-getpost)
 
-## 🌱 Getting startded with basic JS
+## 🌱 Getting started with basic JS
 
 Who likes spending time on a static site? nobody, right? So to give life to a website we use JavaScripts. But to dive deep here are few things we must know.
 
@@ -55,7 +55,7 @@ There are 6 basic data types in JavaScript which can be divided into 3 main cate
 
 ### Doing math
 
-We can perform all the math opertions in js. for example,
+We can perform all the math operations in js. for example,
 
 ```javascript
 var num1 = 22;
@@ -95,7 +95,7 @@ console.log(randomNum);
 
 ### Conditional Statements :
 
-This is one of the core concept. We allmost use it everywhere 😉. Lets see some example,
+This is one of the core concept. We use it almost everywhere 😉. Lets see some example,
 
 -   _if-else_ statement
 
@@ -173,7 +173,7 @@ console.log(slicedAnimals);
 // Output: ["🦒", "🦓", "🐵"];
 ```
 
-### Repeating certain task untill condition is fulfilled
+### Repeating certain task until condition is fulfilled
 
 -   _while loop_
 
@@ -256,7 +256,7 @@ There is a saying,
 
 > Don't Repeat Yourself aka the DRY principle.
 
-in programming, whenever the repetation comes there we add `function`'s to make our life easier. 😉
+in programming, whenever the repetition comes there we add `function`'s to make our life easier. 😉
 
 -   Function and Function call
 
@@ -300,7 +300,7 @@ var User = {
 };
 User.phone = 9876543210; // Changing values
 User["age"] = 22; // Changing values
-User.city = "Berlin"; // Adding new propery
+User.city = "Berlin"; // Adding new property
 console.log(User);
 /* 
 Output :
@@ -433,7 +433,7 @@ greetings("Jenny");
 Functions are everywhere in js, and to name them is hard. But now in `ES6`, we can create an anonymous function like this `()=>{}`. We won't have to use the `return` statement when there is only one statement in the function's body, this is known as `implicit return`.
 
 ```javascript
-/* Arrow functions - implicit rerurn*/
+/* Arrow functions - implicit return*/
 const doubleIt = (num) => num * 2;
 console.log(doubleIt(4));
 // Output: 8
@@ -442,7 +442,7 @@ const add = (a, b) => a + b;
 console.log(add(40, 50));
 // Output: 90
 
-/* explicit rerurn */
+/* explicit return */
 const sumTimesDifference = (x, y) => {
 	const sum = x + y;
 	const diff = x - y;
@@ -492,17 +492,17 @@ console.log(student1.name, student2.name);
 // Output: Tom Hardy Chris Hemsworth
 ```
 
--   ### inheritence, extends, super()
+-   ### inheritance, extends, super()
 
 ```javascript
-/* inheritence, extends, super */
+/* inheritance, extends, super */
 class Parent {
 	constructor() {
 		this.fatherName = "Christopher Nolan";
 		this.motherName = "Emma Thomas";
 	}
 }
-class Chlid extends Parent {
+class Child extends Parent {
 	constructor(name, age) {
 		super();
 		this.name = name;
@@ -513,8 +513,8 @@ class Chlid extends Parent {
 	}
 }
 
-const kid1 = new Chlid("Flora Nolan", 18);
-const kid2 = new Chlid("Magnus Nolan", 12);
+const kid1 = new Child("Flora Nolan", 18);
+const kid2 = new Child("Magnus Nolan", 12);
 console.log(kid1.name); // Output : Christopher Nolan
 console.log(kid2.age); // Output : Emma Thomas
 console.log(kid1.getFamily()); // Output: Name: Flora Nolan, Father: Christopher Nolan, Mother: Emma Thomas
@@ -585,21 +585,21 @@ function add(num1, num2) {
 }
 result = add(10, 30);
 console.log(result);
-// Oputput: undefined
+// Output: undefined
 
 /* passing incorrect parameter */
 function add(num1, num2) {
 	console.log(num1, num2);
 }
 result = add();
-// Oputput: undefined
+// Output: undefined
 
 /* passing incorrect parameter */
 function add(num1, num2) {
 	console.log(num1 + num2);
 }
 result = add();
-// Oputput: NaN;
+// Output: NaN;
 
 /* Accessing non-existing index/property */
 const userData = {
@@ -607,11 +607,11 @@ const userData = {
 	phone: "123263",
 };
 console.log(userData.id);
-// Oputput: undefined
+// Output: undefined
 
 userData.address = undefined;
 console.log(userData.address);
-// Oputput: undefined
+// Output: undefined
 ```
 
 -   ### == vs ===, implicit conversion
@@ -818,7 +818,7 @@ JavaScript provides a global `JSON object` that has methods available for conver
 -   `JSON.stringify()`: It does the opposite.
 
 ```javascript
-/* JSON to Object*/
+/* JSON to/from Object*/
 const obj = JSON.parse(data);
 const json = JSON.stringify(obj);
 
@@ -856,3 +856,7 @@ console.log(json);
 {"id":1,"name":"Leanne Graham","username":"Bret","email":"Sincere@april.biz","address":{"street":"Kulas Light","suite":"Apt. 556","city":"Gwenborough","zipcode":"92998-3874","geo":{"lat":"-37.3159","lng":"81.1496"}},"phone":"1-770-736-8031 x56442","website":"hildegard.org","company":{"name":"Romaguera-Crona","catchPhrase":"Multi-layered client-server neural-net","bs":"harness real-time e-markets"}}
 */
 ```
+
+Thank you so mush for your time to follow along. If you smell somethings wrong, please do let me know. If you liked it give it a star.
+
+Have fun, cheers! 🍻

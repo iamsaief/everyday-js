@@ -516,7 +516,7 @@ class Child extends Parent {
 const kid1 = new Child("Flora Nolan", 18);
 const kid2 = new Child("Magnus Nolan", 12);
 console.log(kid1.name); // Output : Flora Nolan
-console.log(kid2.age); // Output : Magnus Nolan
+console.log(kid2.age); // Output : 12
 console.log(kid1.getFamily()); // Output: Name: Flora Nolan, Father: Christopher Nolan, Mother: Emma Thomas
 ```
 

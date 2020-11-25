@@ -684,7 +684,7 @@ console.log(greenH);
 // Output : 💚
 ```
 
--   ### global/block scope, accessing outer scope variables, hoisting
+-   ### global/block scope, accessing outer scope variables
 
     -   `let`, `const` doesn't go outside block/function scope, but
     -   variables with `var` get hoisted, means that it takes the declaration outside of the scope, thus it can be accessed from the outer scope.
@@ -711,6 +711,43 @@ console.log(result); // 10
     10
  */
 ```
+
+-   ### Block Bindings
+
+    Variables declaration in JavaScript is not easy behind the scenes. Unlike other programming languages variables (or bindings) are created depending on the scope they're declared in, ES6 allows us to control the scopes easily.
+
+    -   `var`, `hoisting`:
+        Whenever/Wherever a variable is declared with `var` behind the scene JS took it to the top of the function/global scope, it called `hoisting`. let see it in actions -
+
+    ```javascript
+    function getName(condition) {
+    	if (condition) {
+    		var fName = "Tom";
+    		// others ......
+    		return fName;
+    	} else {
+    		// fName is exits here with a value of undefined
+    		return null;
+    	}
+    	// fName is exits here with a value of undefined
+    }
+    ```
+
+    behind the scene JavaScript engine interprets the function like this -
+
+    ```javascript
+    function getName(condition) {
+    	var fName;
+
+    	if (condition) {
+    		fName = "Tom";
+
+    		return fName;
+    	} else {
+    		return null;
+    	}
+    }
+    ```
 
 -   ### slice(), splice(), join()
     -   `slice()` - takes starting index and before-end index, returns new array

@@ -894,6 +894,6 @@ console.log(json);
 */
 ```
 
-Thank you so mush for your time to follow along. If you smell somethings wrong, please do let me know. If you liked it give it a star.
+Thank you so much for your time to follow along. If you smell somethings wrong, please do let me know. If you liked it give it a star.
 
 Have fun, cheers! 🍻
